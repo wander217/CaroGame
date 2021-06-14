@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="30dp"
+    android:layout_height="30dp"
+    android:background="@drawable/cell_bg">
+
+    <TextView
+        android:id="@+id/cell"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:fontFamily="@font/baloo_tamma"
+        android:scaleX="2"
+        android:scaleY="2"
+        android:text="o"
+        android:textAlignment="center"
+        android:textColor="@color/x_color"
+        android:textSize="19dp" />
+</FrameLayout>

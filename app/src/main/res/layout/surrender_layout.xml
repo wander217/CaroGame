@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="370dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:background="@drawable/home_dialog_background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    title-->
+    <TextView
+        android:id="@+id/surrender_title"
+        android:text="Thông báo"
+        android:textColor="@color/nav_button"
+        android:fontFamily="@font/baloo_tamma"
+        android:textSize="35dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!--    message-->
+    <TextView
+        android:id="@+id/surrender_notice"
+        android:text="Bạn có muốn đầu hàng ?"
+        android:textColor="@color/black"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        app:layout_constraintTop_toBottomOf="@id/surrender_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+    <!--    Yes button-->
+    <Button
+        android:id="@+id/surrender_yes"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:layout_marginLeft="30dp"
+        android:backgroundTint="@color/yes"
+        android:backgroundTintMode="src_in"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Có"
+        android:textSize="20dp"
+        app:cornerRadius="30dp"
+        app:strokeWidth="1dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/surrender_notice"/>
+
+    <!--    Yes button-->
+    <Button
+        android:id="@+id/surrender_no"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="20dp"
+        android:background="@null"
+        android:backgroundTint="@color/menu_button"
+        android:backgroundTintMode="src_in"
+        android:fontFamily="@font/baloo_tamma"
+        android:text="Không"
+        android:textSize="20dp"
+        app:cornerRadius="30dp"
+        app:strokeWidth="1dp"
+        android:layout_marginLeft="20dp"
+        android:paddingTop="10dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@id/surrender_yes"
+        app:layout_constraintTop_toBottomOf="@id/surrender_notice"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    tools:context=".MatchRoomActivity"
+    android:background="@color/menu_button">
+<!--    playing-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--    player 1-->
+        <LinearLayout
+            android:id="@+id/match_room_player1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <!--        avatar-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
+                    android:id="@+id/match_room_avatar1"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar" />
+            </androidx.cardview.widget.CardView>
+            <!--        info-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/match_room_nickname1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Thịnh"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/match_room_elo1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Elo:1000"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--        timer-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/match_room_clock1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/nav_button"
+                android:orientation="horizontal"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:id="@+id/match_room_clock1_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_timer"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/match_room_clock1_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/baloo_tamma"
+                        android:gravity="center"
+                        android:text="Đến lượt"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+        <!--    table-->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/match_room_table"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@id/match_room_player2"
+            app:layout_constraintTop_toBottomOf="@id/match_room_player1" />
+        <!--    player2-->
+        <LinearLayout
+            android:id="@+id/match_room_player2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <!--        timer-->
+            <androidx.cardview.widget.CardView
+                android:id="@+id/match_room_clock2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:background="@null"
+                android:backgroundTint="@color/nav_button"
+                android:orientation="horizontal"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="3dp">
+
+                <LinearLayout
+                    android:id="@+id/match_room_clock2_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_timer"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:id="@+id/match_room_clock2_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="5dp"
+                        android:fontFamily="@font/baloo_tamma"
+                        android:gravity="center"
+                        android:text="Đến lượt"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <!--        info-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:gravity="center_vertical"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/match_room_nickname2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Thịnh"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/match_room_elo2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="Elo:1000"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <!--        avatar-->
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:cardCornerRadius="30dp">
+
+                <ImageView
+                    android:id="@+id/match_room_avatar2"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:src="@drawable/avatar" />
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    result-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/match_room_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--    player 1-->
+        <LinearLayout
+            android:id="@+id/match_room_notice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@color/menu_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TextView
+                android:id="@+id/match_room_result_content"
+                android:text="Thất bại"
+                android:textSize="25sp"
+                android:textColor="@color/match_notice"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"/>
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:id="@+id/match_room_result_message"
+                    android:layout_weight="1"
+                    android:text="Bạn đã thua"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/match_room_elo_result"
+                    android:text="Elo:-10"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+                <TextView
+                    android:id="@+id/match_room_money_result"
+                    android:text="Tiền:-10"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:textColor="@color/white"
+                    android:textStyle="bold"
+                    android:textSize="15sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+        </LinearLayout>
+<!--       space-->
+        <LinearLayout
+            android:id="@+id/match_room_space"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/blur"
+            app:layout_constraintBottom_toTopOf="@id/match_room_play_again"
+            app:layout_constraintTop_toBottomOf="@id/match_room_notice"
+            android:orientation="horizontal" />
+<!--        play again-->
+        <LinearLayout
+            android:id="@+id/match_room_play_again"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:gravity="end"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:background="@color/menu_button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <Button
+                android:id="@+id/match_room_play_again_button"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@null"
+                android:backgroundTint="@color/match_again"
+                android:paddingLeft="50dp"
+                android:paddingRight="50dp"
+                android:text="Thoát ra"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:icon="@drawable/ic_again"
+                app:iconGravity="end"
+                app:iconSize="30dp" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
